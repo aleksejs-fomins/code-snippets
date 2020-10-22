@@ -1,0 +1,2 @@
+* Must use "restrict" keyword for functions with 2 independent pointer args, otherwise automatic vectorizer assumes there may be dependencies between the pointers.
+* All functions of type _mm_ are SSE and _mm256_ are avx, except of _mm_broadcast_ss(a) which loads copies of a into entire buffer, which is AVX. To prevent from storing twice the memory during SSE, use _mm256_zeroupper()

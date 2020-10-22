@@ -1,0 +1,5 @@
+Installing R on anaconda
+
+conda create -n r_env r-essentials r-base
+conda activate r_env
+conda install -c anaconda fonts-anaconda
